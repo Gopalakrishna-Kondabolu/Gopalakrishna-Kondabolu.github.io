@@ -301,21 +301,40 @@
     </div>
 
     <div style="padding: 1.5rem; border: 1px solid rgba(214, 175, 55, 0.2); border-radius: 8px; margin-bottom: 1.5rem; background: rgba(255, 255, 255, 0.02);">
-      <p style="margin-top: 0; margin-bottom: 1rem; font-size: 0.95rem; font-weight: bold; color: #d4af37; text-transform: uppercase; letter-spacing: 1px;">
-        📅 Schedule Direct Availability
-      </p>
-      <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-        <div class="input-group" style="flex: 1; min-width: 240px; margin-bottom: 0;">
-          <input type="date" id="sync-date" name="proposed_date" style="color-scheme: dark;" required>
-          <label for="sync-date" style="transform: translateY(-20px) scale(0.8); color: #d4af37;">Preferred Sync Date</label>
-        </div>
-        
-        <div class="input-group" style="flex: 1; min-width: 240px; margin-bottom: 0;">
-          <input type="time" id="sync-time" name="proposed_time" style="color-scheme: dark;" required>
-          <label for="sync-time" style="transform: translateY(-20px) scale(0.8); color: #d4af37;">Preferred Time (Your Local Time)</label>
-        </div>
-      </div>
+  <p style="margin-top: 0; margin-bottom: 1.5rem; font-size: 0.95rem; font-weight: bold; color: #d4af37; text-transform: uppercase; letter-spacing: 1px;">
+    📅 Schedule Direct Availability
+  </p>
+  
+  <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+    
+    <div style="flex: 1; min-width: 240px; display: flex; flex-direction: column; gap: 0.6rem;">
+      <label for="sync-date" style="color: #d4af37; font-size: 0.85rem; font-weight: 600; text-align: left; letter-spacing: 0.5px;">
+        Preferred Sync Date
+      </label>
+      <input 
+        type="date" 
+        id="sync-date" 
+        name="proposed_date" 
+        style="color-scheme: dark; padding: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 6px; color: #fff; width: 100%; box-sizing: border-box; font-family: inherit; font-size: 1rem;" 
+        required
+      >
     </div>
+    
+    <div style="flex: 1; min-width: 240px; display: flex; flex-direction: column; gap: 0.6rem;">
+      <label for="sync-time" style="color: #d4af37; font-size: 0.85rem; font-weight: 600; text-align: left; letter-spacing: 0.5px;">
+        Preferred Time (Your Local Time)
+      </label>
+      <input 
+        type="time" 
+        id="sync-time" 
+        name="proposed_time" 
+        style="color-scheme: dark; padding: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 6px; color: #fff; width: 100%; box-sizing: border-box; font-family: inherit; font-size: 1rem;" 
+        required
+      >
+    </div>
+
+  </div>
+</div>
 
     <div class="input-group">
       <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
