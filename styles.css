@@ -1123,3 +1123,34 @@ body.scrolled .nav-links a {
 .scroll-up{
   display: none !important;   
 }
+/* Emergency Header Patch - styles.css */
+.navbar {
+  /* ... your existing navbar style ... */
+  z-index: 1000; /* Priority layering */
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between; /* Fixes layout drift */
+  align-items: center; /* Center aligns logo and navigation */
+  max-width: 1200px; /* Ensures consistent layout width */
+  margin: 0 auto; /* Centers the content */
+  padding: 0 1rem;
+}
+
+.logo {
+  /* Adjust logo styling to ensure it is not pushing navigation */
+}
+
+.nav-links {
+  /* ... existing styles ... */
+  display: flex; /* Ensures horizontally aligned links */
+  gap: 1.5rem; /* Specific gap instead of margin */
+}
+
+@media (max-width: 768px) {
+  /* Handle mobile header alignment */
+  .navbar-inner {
+    flex-wrap: wrap; /* Ensure elements wrap on small screens */
+  }
+}
